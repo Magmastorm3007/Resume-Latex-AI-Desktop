@@ -1,6 +1,6 @@
 # Resume-LaTeX-AI-Desktop
 
-Welcome to the **Resume-LaTeX-AI-Desktop** project! This project is a desktop application built with React, which generates beautifully formatted resumes using LaTeX. It integrates AI to personalize and enhance the resume-building process.
+Welcome to the **Resume-Latex-AI-desktop** project! This project is a desktop application built with React, which generates beautifully formatted resumes using LaTeX. It integrates AI to personalize and enhance the resume-building process.
 
 ## Project Overview
 
