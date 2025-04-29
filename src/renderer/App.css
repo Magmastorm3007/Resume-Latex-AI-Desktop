@@ -1,62 +1,92 @@
-/*
- * @NOTE: Prepend a `~` to css file paths that are in your node_modules
- *        See https://github.com/webpack-contrib/sass-loader#imports
- */
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  position: relative;
-  color: white;
   height: 100vh;
-  background: linear-gradient(
-    200.96deg,
-    #fedc2a -29.09%,
-    #dd5789 51.77%,
-    #7a2c9e 129.35%
-  );
-  font-family: sans-serif;
-  overflow-y: hidden;
+  background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #0d1b2a;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Layout Container */
+.app-container {
+  background-color: #ffffff;
+  width: 80%;
+  max-width: 1000px;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title and Text */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0a2a66;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  color: #37474f;
+  text-align: center;
+  max-width: 700px;
+}
+
+/* Button */
 button {
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #1976d2;
+  color: #ffffff;
   border: none;
-  appearance: none;
-  font-size: 1.3rem;
-  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
-    0px 18px 88px -4px rgba(24, 39, 75, 0.14);
-  transition: all ease-in 0.1s;
+  border-radius: 8px;
   cursor: pointer;
-  opacity: 0.9;
+  box-shadow: 0px 4px 16px rgba(25, 118, 210, 0.2);
+  transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 button:hover {
-  transform: scale(1.05);
-  opacity: 1;
+  background-color: #1565c0;
+  transform: translateY(-2px);
 }
 
-li {
-  list-style: none;
-}
-
+/* Links */
 a {
+  color: #1976d2;
   text-decoration: none;
-  height: fit-content;
-  width: fit-content;
-  margin: 10px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
 }
 
 a:hover {
-  opacity: 1;
-  text-decoration: none;
+  opacity: 0.8;
 }
 
-.Hello {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
+/* Responsive */
+@media (max-width: 768px) {
+  .app-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
